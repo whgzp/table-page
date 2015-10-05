@@ -1,0 +1,27 @@
+<div>
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>学分</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in data">
+            <td>{{person.name}}</td>
+            <td>{{person.age}}</td>
+            <td>{{person.sex}}</td>
+            <td>{{person.scope}}</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+    <nav>
+        <ul class="pagination">
+            <li ng-repeat="i in pageCount track by $index"><a href="javascript:void(0)" ng-click="toPage($index)">{{$index+1}}</a></li>
+        </ul>
+    </nav>
+</div>
